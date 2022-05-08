@@ -90,6 +90,8 @@ Counters.Counter private _tokenIds;
 
       domains[name] = msg.sender;
       console.log("%s has registered a domain!", msg.sender);
+
+      _tokenIds.increment();
   }
 
   function getAddress(string calldata name) public view returns (address) {
